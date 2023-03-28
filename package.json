@@ -1,7 +1,9 @@
 {
+  "homepage": "https://github.com/siddharthkumarjha/minor_project",
   "scripts": {
     "build": "vite build",
     "start": "vite",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
   "devDependencies": {

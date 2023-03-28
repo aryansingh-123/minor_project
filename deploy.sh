@@ -11,5 +11,6 @@ git commit -m "deploy"
 
 # If you are deploying to https://<USERNAME>.github.io/<REPO>
 # git push -f  git@github.com:siddharthkumarjha/minor_project.git main:gh-pages
+# git subtree push --prefix dist origin gh-pages
 
 cd -

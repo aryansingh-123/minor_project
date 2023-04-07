@@ -8,6 +8,10 @@
   text-transform: capitalize;
   transition: all .2s linear;
 }
+.cross{
+  cursor: pointer;
+  right: 100%;
+}
 
 .container{
   display: flex;
@@ -15,13 +19,13 @@
   align-items: center;
   padding:25px;
   min-height: 100vh;
-  background: linear-gradient(90deg, #353ebc 60%, #353e9b , #232b8b);
+  background-image: radial-gradient(circle, #051937, #004d7a, #008793, #00bf72, #a8eb12);
 }
-
 .container form{
   padding:20px;
   width:700px;
   background: #fff;
+  border-radius: 5%;
   box-shadow: 0 5px 10px rgba(0,0,0,.1);
 }
 
@@ -88,6 +92,20 @@
   cursor: pointer;
 }
 
+
 .container form .submit-btn:hover{
   background: #2ecc71;
+}
+
+.container form .cancel{
+  width: 100%;
+  padding:12px;
+  font-size: 17px;
+  background: #27ae60;
+  color:#fff;
+  margin-top: 5px;
+  cursor: pointer;
+}
+.container form .cancel:hover{
+  background: red;
 }

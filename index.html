@@ -25,7 +25,7 @@
 
         <div class="flex relative gap-0.5 mt-4 mb-4 -right-2/4 font-mullish font-bold ">   
             <h2 class="py-2 px-3 pr-5 rounded-sm bg-amber-200 cursor-pointer transition-all duration-200 hover:bg-amber-400 text-white ">CUSTOM ORDER</h2>
-            <h2 class="py-2 px-3 font-mullish font-bold text-white  hover:bg-amber-400 rounded-sm cursor-pointer transition-all duration-200 relative group">SUPPORTS</h2>
+            <h2 id="support" class="py-2 px-3 font-mullish font-bold text-white  hover:bg-amber-400 rounded-sm cursor-pointer transition-all duration-200 relative group">SUPPORTS</h2>
             <h2 class="py-2 px-3 font-mullish font-bold text-white  hover:bg-amber-400 rounded-sm cursor-pointer transition-all duration-200 relative group">PURCHASE NOW</h2>
             
         </div>
@@ -68,24 +68,49 @@
     <div class="bg-black h-1 w-full -translate-y-14"></div>
     <div class="bg-black h-1 w-full -translate-y-14"></div>
     <!--For Laptop Show Piece -->
-   
-   
-
+   <section class="bg-grayText ">
+    <div class="text-center font-mullish font-extrabold text-2xl pb-6 pt-4 text-white underline ">
+        <h1>Laptop Gallery</h1>
+    </div>
+<div class=" bg-grayText grid grid-cols-2 pb-3 gap-2">
+    <div>
+        <img class=" cursor-pointer h-full w-full rounded-lg " src="./Images/apple.jpeg" alt="">
+        <h2 class="text-white -translate-y-24 font-mullish text-xl font-bold -translate-x-7 text-right ">MacBook Air 12</h2>
+        <button id="purchase" class="bg-white text-black -translate-y-20  translate-x-[480px] rounded-md p-1 duration-200 transition-all hover:bg-sky-900 ">Purchase Now</button>
+    </div>
+    <div>
+        <img class="cursor-pointer h-full w-full rounded-lg" src="Images/apple3.jpg" alt="">
+        <h2 class="text-white -translate-y-24 font-mullish text-xl font-bold -translate-x-7 text-right ">MacBook Air (M2)</h2>
+        <button id="purchase1" class="bg-white text-black -translate-y-20  translate-x-[480px] rounded-md p-1 duration-200 transition-all hover:bg-sky-900 ">Purchase Now</button>
+    </div>
+    <div>
+        <img class="cursor-pointer h-full w-full rounded-lg" src="./Images/apple2.jpg" alt="">
+        <h2 class="text-white -translate-y-24 font-mullish text-xl font-bold -translate-x-7 text-right ">MacBook Pro 13-in</h2>
+        <button id="purchase2" class="bg-white text-black -translate-y-20  translate-x-[480px] rounded-md p-1 duration-200 transition-all hover:bg-sky-900 ">Purchase Now</button>
+    </div>
+    <div>
+        <img class="cursor-pointer h-full w-full rounded-lg" src="./Images/apple4.jpg" alt="">
+        <h2 class="text-white -translate-y-24 font-mullish text-xl font-bold -translate-x-7 text-right ">MacBook Pro 14-in</h2>
+        <button id="purchase3" class="bg-white text-black -translate-y-20  translate-x-[480px] rounded-md p-1 duration-200 transition-all hover:bg-sky-900 ">Purchase Now</button>
+    </div>
+</div>
+   </section>
   
     <!-- Suggestion support -->
-    <section class="  box-content shadow-2xl bg-slate-200 rounded-full px-4 mr-3 ml-3 -translate-y-0 h-full py-20 flex">
+    <div class="bg-stone-900">
+    <section class="  box-content shadow-2xl justify-center bg-slate-200 rounded-full px-4 mr-3 ml-3 -translate-y-0 h-[150px] py-20 flex">
         <!--Image Holder -->
-        <div class="w-60 h-12 px-9">
-            <img src="./Images/memoji_apple_support__cn6tyghlcp5y_large_2x.jpg"  alt="Loading" loading="lazy" class="rounded-full animate-pulse duration-500 -translate-y-7">
-        </div>
-        <div class=" font-mullish text-grayBlue  px-32 -translate-y-2   ">
-            <h1 class="font-extrabold  text-3xl">For Technical  Support</h1>
-            <div class="py-3 flex gap-4">
-                <input type="email" placeholder="Enter Your mail Here " class="px-4 py-3 rounded-3xl w-[500px]">
+        
+        <div class=" font-mullish text-grayBlue  px-32 -translate-y-5   ">
+            <h1 class="font-extrabold text-center text-3xl underline"> Technical  Support</h1>
+            <div class="py-3 flex flex-col gap-4">
+                <input type="email" placeholder="Enter Your mail Here "  class="px-4 py-3 rounded-3xl w-[500px]">
+                <input type="text" placeholder="write your problem " class="px-4 py-3 rounded-3xl " >
                 <button class="transition ease-in-out delay-10 bg-blue-500 text-white border-2 px-2 py-2 pr-2 rounded-xl hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300" >Help</button>
             </div>
         </div>
     </section>
+</div>
     <!-- Customer Satisfaction -->
     <section class="bg-slate-400 gap-[150px] pl-14 font-mullish  flex  text-xl -translate-y-0">
         <div class="flex items-center gap-2 mb-1 mt-1 mr-1">
@@ -149,5 +174,6 @@
       </footer>
     <!-- JS Scripting -->
     <script src="home.js" type="module"></script>
+    <script src="paymentgateway.js"></script>
 </body>
 </html>

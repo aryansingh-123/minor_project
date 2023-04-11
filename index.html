@@ -15,7 +15,7 @@
     <nav class="bg-deepBlueHead flex"> 
         <img src="./Images/T1.png" alt="TechoMarket" class="w-48 h-12 cursor-pointer">
     <div class="relative -right-3/4 mt-3 mb-3">
-        <button class="transition ease-in-out delay-10 bg-blue-500 text-white border-2 px-2 py-2 pr-2 rounded-md hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300 ">Buy Now </button>   
+        <button id="buyNow" class="transition ease-in-out delay-10 bg-blue-500 text-white border-2 px-2 py-2 pr-2 rounded-md hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300 ">LOG IN</button>   
     </div>
     </nav>
     <!-- Another Nav Bar-->
@@ -25,9 +25,9 @@
 
         <div class="flex relative gap-0.5 mt-4 mb-4 -right-2/4 font-mullish font-bold ">   
             <h2 class="py-2 px-3 pr-5 rounded-sm bg-amber-200 cursor-pointer transition-all duration-200 hover:bg-amber-400 text-white ">CUSTOM ORDER</h2>
-            <h2 class="py-2 px-3 font-mullish font-bold text-white  hover:bg-amber-400 rounded-sm cursor-pointer transition-all duration-200 relative group">SUPPORTS</h2>
-            <h2 class="py-2 px-3 font-mullish font-bold text-white  hover:bg-amber-400 rounded-sm cursor-pointer transition-all duration-200 relative group">CART</h2>
-            <h2 class="py-2 px-3 pr-5 rounded-sm bg-amber-200 text-white cursor-pointer transition-all duration-200 hover:bg-amber-400 text-white ">PURCHASE NOW</h2>
+            <h2 id="support" class="py-2 px-3 font-mullish font-bold text-white  hover:bg-amber-400 rounded-sm cursor-pointer transition-all duration-200 relative group">SUPPORTS</h2>
+            <h2 class="py-2 px-3 font-mullish font-bold text-white  hover:bg-amber-400 rounded-sm cursor-pointer transition-all duration-200 relative group">PURCHASE NOW</h2>
+            
         </div>
     </nav>
 <!-- Welcome Section -->
@@ -68,24 +68,112 @@
     <div class="bg-black h-1 w-full -translate-y-14"></div>
     <div class="bg-black h-1 w-full -translate-y-14"></div>
     <!--For Laptop Show Piece -->
+   <section class="bg-grayText ">
+    <div class="text-center font-mullish font-extrabold text-2xl pb-6 pt-4 text-white underline ">
+        <h1>Laptop Gallery</h1>
+    </div>
+<div class=" bg-grayText grid grid-cols-2 pb-3 gap-2">
+    <div>
+        <img class=" cursor-pointer h-full w-full rounded-lg " src="./Images/apple.jpeg" alt="">
+        <h2 class="text-white -translate-y-24 font-mullish text-xl font-bold -translate-x-7 text-right ">MacBook Air 12</h2>
+        <button id="purchase" class="bg-white text-black -translate-y-20  translate-x-[480px] rounded-md p-1 duration-200 transition-all hover:bg-sky-900 ">Purchase Now</button>
+    </div>
+    <div>
+        <img class="cursor-pointer h-full w-full rounded-lg" src="Images/apple3.jpg" alt="">
+        <h2 class="text-white -translate-y-24 font-mullish text-xl font-bold -translate-x-7 text-right ">MacBook Air (M2)</h2>
+        <button id="purchase1" class="bg-white text-black -translate-y-20  translate-x-[480px] rounded-md p-1 duration-200 transition-all hover:bg-sky-900 ">Purchase Now</button>
+    </div>
+    <div>
+        <img class="cursor-pointer h-full w-full rounded-lg" src="./Images/apple2.jpg" alt="">
+        <h2 class="text-white -translate-y-24 font-mullish text-xl font-bold -translate-x-7 text-right ">MacBook Pro 13-in</h2>
+        <button id="purchase2" class="bg-white text-black -translate-y-20  translate-x-[480px] rounded-md p-1 duration-200 transition-all hover:bg-sky-900 ">Purchase Now</button>
+    </div>
+    <div>
+        <img class="cursor-pointer h-full w-full rounded-lg" src="./Images/apple4.jpg" alt="">
+        <h2 class="text-white -translate-y-24 font-mullish text-xl font-bold -translate-x-7 text-right ">MacBook Pro 14-in</h2>
+        <button id="purchase3" class="bg-white text-black -translate-y-20  translate-x-[480px] rounded-md p-1 duration-200 transition-all hover:bg-sky-900 ">Purchase Now</button>
+    </div>
+</div>
+   </section>
   
     <!-- Suggestion support -->
-    <section class="  box-content shadow-2xl bg-slate-200 rounded-full px-4  -translate-y-14 h-full py-20 flex">
+    <div class="bg-stone-900">
+    <section class="  box-content shadow-2xl justify-center bg-slate-200 rounded-full px-4 mr-3 ml-3 -translate-y-0 h-[150px] py-20 flex">
         <!--Image Holder -->
-        <div class="w-60 h-12 px-9">
-            <img src="./Images/memoji_apple_support__cn6tyghlcp5y_large_2x.jpg"  alt="Loading" loading="lazy" class="rounded-full -translate-y-7">
-        </div>
-        <div class=" font-mullish text-grayBlue  px-32 -translate-y-9   ">
-            <h1 class="font-extrabold  text-3xl">For Technical  Support</h1>
-            <div class="py-3 flex gap-4">
-                <input type="email" placeholder="Enter Your mail Here " class="px-4 py-3 rounded-3xl w-[500px]">
+        
+        <div class=" font-mullish text-grayBlue  px-32 -translate-y-5   ">
+            <h1 class="font-extrabold text-center text-3xl underline"> Technical  Support</h1>
+            <div class="py-3 flex flex-col gap-4">
+                <input type="email" placeholder="Enter Your mail Here "  class="px-4 py-3 rounded-3xl w-[500px]">
+                <input type="text" placeholder="write your problem " class="px-4 py-3 rounded-3xl " >
                 <button class="transition ease-in-out delay-10 bg-blue-500 text-white border-2 px-2 py-2 pr-2 rounded-xl hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300" >Help</button>
             </div>
         </div>
     </section>
+</div>
+    <!-- Customer Satisfaction -->
+    <section class="bg-slate-400 gap-[150px] pl-14 font-mullish  flex  text-xl -translate-y-0">
+        <div class="flex items-center gap-2 mb-1 mt-1 mr-1">
+            <i class="fas fa-shipping-fast"></i>
+            <h3 class="text-white font-medium">Free Shipping</h3>
+        </div>
+        <div class="flex items-center gap-2 mb-1 mt-1 mr-1">
+            <i class="fas fa-undo-alt"></i>
+            <h3 class="text-white font-medium">Easy Return</h3>
+        </div>
+        <div class="flex items-center gap-2 mb-1 mt-1 mr-1">
+            <i class="fas fa-shield-alt"></i>
+            <h3 class="text-white font-medium">Safe and Secure Payment</h3>
+        </div>
+        <div class="flex items-center gap-2 mb-1 mt-1 mr-1">
+            <i class="fas fa-headset"></i>
+            <h3 class="text-white font-medium">Customer Support</h3>
+        </div>
+    </section>
     
-
+    <!--Footer Section-->
+         
+    <footer class="bg-gray-900 text-white gap-5 py-5 pl-3">
+        <div class="container mx-auto flex flex-wrap justify-between">
+          <div class="w-full lg:w-1/4 mb-4 lg:mb-0">
+            <h2 class="text-lg font-semibold mb-2">Address</h2>
+            <p>KIIT UNIVERSITY</p>
+            <p>Bhubaneswar</p>
+            <p>Odisha(India)</p>
+          </div>
+          <div class="w-full lg:w-1/4 mb-4 lg:mb-0">
+            <h2 class="text-lg font-semibold mb-2">Phone</h2>
+            <p>+91 8932-2654-09</p>
+          </div>
+          <div class="w-full lg:w-1/4 mb-4 lg:mb-0">
+            <h2 class="text-lg font-semibold mb-2">Email</h2>
+            <p>techo@gmail.com</p>
+          </div>
+          <div class="w-full lg:w-1/4 mb-4 lg:mb-0">
+            <h2 class="text-lg font-semibold mb-2">Follow Us</h2>
+            <div class="flex">
+              <a href="#" class="mr-2"><i class="fab fa-facebook fa-lg"></i></a>
+              <a href="#" class="mr-2"><i class="fab fa-twitter fa-lg"></i></a>
+              <a href="#" class="mr-2"><i class="fab fa-instagram fa-lg"></i></a>
+              <a href="#" class="mr-2"><i class="fab fa-linkedin fa-lg"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="container mx-auto mt-2">
+          <div class="flex justify-between">
+            <div class="text-sm">
+              &copy; 2023 My Website. All Rights Reserved.
+            </div>
+            <div class="text-sm -translate-x-4">
+              <a href="#" id="privacy" class="hover:text-gray-300">Privacy Policy</a>
+              <span class="mx-2">|</span>
+              <a href="#" class="hover:text-gray-300">Terms of Use</a>
+            </div>
+          </div>
+        </div>
+      </footer>
     <!-- JS Scripting -->
     <script src="home.js" type="module"></script>
+    <script src="paymentgateway.js"></script>
 </body>
 </html>

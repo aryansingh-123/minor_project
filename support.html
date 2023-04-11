@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <div class="back-button">
+        <a href="#" onclick="history.back()">Back</a>
+        <img src="./Images/T1.png" style="float:right; width: 150px; height: 40px;">
+      </div>
+
+<head>
+    <link rel="stylesheet" href="stylesupport.css" >
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mulish">
+</head>
+
+<body>
+    <section id="support">
+        <h2>Support and Enquiry</h2>
+        <p>Please fill out the form below to submit your enquiry:</p>
+        <form>
+            <div>
+                <label for="enquiry-type">Type of Enquiry:</label>
+                <select id="enquiry-type" name="enquiry-type">
+                    <option value="product-information">Product information and specifications</option>
+                    <option value="order-tracking">Order tracking and status updates</option>
+                    <option value="payment-billing">Payment and billing inquiries</option>
+                    <option value="returns-warranty">Returns and warranty information</option>
+                    <option value="technical-support">Technical support and troubleshooting</option>
+                    <option value="general-enquiry">Other general inquiries</option>
+                </select>
+            </div>
+            <div>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div>
+                <label for="mobile-number">Mobile Number:</label>
+                <input type="tel" id="mobile-number" name="mobile-number" required>
+            </div>
+            <div>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+</body>
+
+</html>

@@ -7,12 +7,12 @@
     "deploy": "gh-pages -d dist"
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.13",
+    "autoprefixer": "^10.4.14",
     "postcss": "^8.4.21",
-    "tailwindcss": "^3.2.7",
+    "tailwindcss": "^3.3.1",
     "vite": "^4.2.1"
   },
-  "dependencies":{
+  "dependencies": {
     "feather": "^0.0.5",
     "gh-pages": "^5.0.0"
   }

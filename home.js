@@ -54,5 +54,6 @@ paymentGateway3.addEventListener("click" , function(){
 });
 
 
+//support documentation
 
 

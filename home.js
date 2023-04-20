@@ -50,5 +50,10 @@ const paymentGateway3 = document.getElementById('purchase3');
 
 paymentGateway3.addEventListener("click" , function(){
     console.log("Puchasing");
-    window.location.href = './paymentgateway.html';
+    window.location.href = 'minor_project/paymentgateway.html';
 });
+
+
+//support documentation
+
+

@@ -2,7 +2,7 @@
 <html>
     <div class="back-button">
         <a href="#" onclick="history.back()">Back</a>
-        <img src="./Images/T1.png" style="float:right; width: 150px; height: 40px;">
+        <img src="./Images/T1.png" onclick="history.back()" style="float:right; width: 150px; height: 40px;">
       </div>
 
 <head>
@@ -14,10 +14,10 @@
     <section id="support">
         <h2>Support and Enquiry</h2>
         <p>Please fill out the form below to submit your enquiry:</p>
-        <form>
+        <form name="submit-to-google-sheet">
             <div>
                 <label for="enquiry-type">Type of Enquiry:</label>
-                <select id="enquiry-type" name="enquiry-type">
+                <select id="enquiry-type" name="Enquiry-type">
                     <option value="product-information">Product information and specifications</option>
                     <option value="order-tracking">Order tracking and status updates</option>
                     <option value="payment-billing">Payment and billing inquiries</option>
@@ -28,23 +28,25 @@
             </div>
             <div>
                 <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
+                <input type="text" id="name" name="Name" required>
             </div>
             <div>
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+                <input type="email" id="email" name="Email" required>
             </div>
             <div>
                 <label for="mobile-number">Mobile Number:</label>
-                <input type="tel" id="mobile-number" name="mobile-number" required>
+                <input type="tel" id="mobile-number" name="Mobile-number" required>
             </div>
             <div>
                 <label for="message">Message:</label>
-                <textarea id="message" name="message" required></textarea>
+                <textarea id="message" name="Message" required></textarea>
             </div>
             <button type="submit">Submit</button>
         </form>
+        <span id="msg"></span>
     </section>
+    <script src="support.js"></script>
 </body>
 
 </html>

@@ -4,8 +4,11 @@
   <meta charset="UTF-8">
   <title>Techo - Log In</title>
   <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Rubik:400,700'>
-  <link rel="stylesheet" href="./login.css">
+  
 
+  <script type="module" crossorigin src="./assets/login-f1b31dcc.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/modulepreload-polyfill-3cfb730f.js">
+  <link rel="stylesheet" href="./assets/login-440e50e2.css">
 </head>
 <body>
 <!-- partial:index.partial.html -->
@@ -14,10 +17,10 @@
     <h1>Login</h1>
     <div class="content">
       <div class="input-field">
-        <input type="email" placeholder="Email" autocomplete="nope">
+        <input type="email" id="userEmail" name="userEmail"  placeholder="Email" autocomplete="nope">
       </div>
       <div class="input-field">
-        <input type="password" placeholder="Password" autocomplete="new-password">
+        <input type="password" id="password" name="password" placeholder="Password" autocomplete="new-password">
       </div>
       <a href="#" class="link">Forgot Your Password?</a>
     </div>
@@ -28,7 +31,7 @@
   </form>
 </div>
 <!-- partial -->
-  <script  src="./login.js"></script>
+  
 
 </body>
 </html>

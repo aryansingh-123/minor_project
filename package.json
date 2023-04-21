@@ -1,19 +1,12 @@
 {
-  "homepage": "https://github.com/siddharthkumarjha/minor_project",
+  "name": "minor_project",
+  "version": "1.0.0",
+  "description": "Laptop Website for minor project",
+  "main": "server/index.js",
   "scripts": {
-    "build": "vite build",
-    "start": "vite",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
-  },
-  "devDependencies": {
-    "autoprefixer": "^10.4.14",
-    "postcss": "^8.4.21",
-    "tailwindcss": "^3.3.1",
-    "vite": "^4.2.1"
-  },
-  "dependencies": {
-    "feather": "^0.0.5",
-    "gh-pages": "^5.0.0"
+    "start": "cd client && npm run build && cd ../server && npm start",
+    "dev": "cd client && npm run dev",
+    "test": "echo \"Error: no test specified\" && exit 1"
   }
 }
+

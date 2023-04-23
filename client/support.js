@@ -9,7 +9,7 @@ form.addEventListener('submit', e => {
     fetch(scriptURL, {
         method: 'POST', body: new FormData(form)})
         .then(response =>{
-            msg.innerHTML = "Problem received Successfully  , We will contact you soon as soon as Possible."
+            alert("Problem received Successfully  , We will contact you soon as soon as Possible.");
             setTimeout(function(){
                 msg.innerHTML = ""
             }, 1000)

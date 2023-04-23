@@ -4,28 +4,9 @@
   "description": "Laptop Website for minor project",
   "main": "server/index.js",
   "scripts": {
-<<<<<<< HEAD
-    "build": "vite build",
-    "start": "vite",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
-  },
-  "devDependencies": {
-    "autoprefixer": "^10.4.14",
-    "postcss": "^8.4.21",
-    "tailwindcss": "^3.3.1",
-    "vite": "^4.2.1"
-  },
-  "dependencies": {
-    "express": "^4.18.2",
-    "feather": "^0.0.5",
-    "gh-pages": "^5.0.0",
-    "mongoose": "^7.0.4"
-=======
     "start": "cd client && npm run build && cd ../server && npm start",
     "dev": "cd client && npm run dev",
     "test": "echo \"Error: no test specified\" && exit 1"
->>>>>>> 10cedb14469bf0a2b468b10f8ace76ee83f68e07
   }
 }
 

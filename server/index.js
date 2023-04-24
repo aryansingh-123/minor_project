@@ -24,22 +24,21 @@ const pool = mysql.createPool({
 
 // generate a JWT token
 function generateToken(user) {
-  return jwt.sign({ username: user.username }, process.env.JWT_SECRET, {
+  return jwt.sign({ userEmail: user.userEmail }, process.env.JWT_SECRET, {
     expiresIn: '1h',
   });
 }
 
 // login endpoint
 app.post('/api/login', async (req, res) => {
-  const { username, password } = req.body;
+  const { userEmail, password } = req.body;
 
   try {
     // query the database for the user with the specified username
     const [rows] = await pool.query(
-      'SELECT * FROM users WHERE username = ?',
-      [username]
+      'SELECT * FROM users WHERE useremail = ?',
+      [userEmail]
     );
-    console.log([username]);
     // check if user exists
     if (rows.length === 0) {
       return res.status(401).json({ message: 'Invalid credentials' });
@@ -47,14 +46,52 @@ app.post('/api/login', async (req, res) => {
 
     // check if password is correct
     const match = await bcrypt.compare(password, rows[0].password);
-    const pass = await bcrypt.hash(password);
-    console.log({pass});
+    // bcrypt.genSalt(10, function(err, salt) {
+    //   bcrypt.hash(password, salt, function(err, hash) {
+    //   // returns hash
+    //   console.log(hash);
+    //   console.log(salt);
+    //   });
+    // });
+    
     if (!match) {
       return res.status(401).json({ message: 'Invalid credentials' });
     }
 
     // generate a JWT token and send it back to the client
     const token = generateToken(rows[0]);
+    res.json({ token });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: 'Server error' });
+  }
+});
+// registration endpoint
+app.post('/api/register', async (req, res) => {
+  const { userName, userEmail, password } = req.body;
+
+  try {
+    // check if user with the given email already exists
+    const [existingUserRows] = await pool.query(
+      'SELECT * FROM users WHERE useremail = ?',
+      [userEmail]
+    );
+    if (existingUserRows.length > 0) {
+      return res.status(409).json({ message: 'User already exists' });
+    }
+
+    // hash the password
+    const saltRounds = 10;
+    const hashedPassword = await bcrypt.hash(password, saltRounds);
+
+    // insert the new user into the database
+    const [insertUserResult] = await pool.query(
+      'INSERT INTO users (username, useremail, password) VALUES (?, ?, ?)',
+      [userName, userEmail, hashedPassword]
+    );
+
+    // generate a JWT token and send it back to the client
+    const token = generateToken({ userEmail });
     res.json({ token });
   } catch (error) {
     console.error(error);

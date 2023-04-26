@@ -39,7 +39,15 @@ document.addEventListener("DOMContentLoaded", () => {
     const userName = createAccountForm.elements.signupUsername.value;
     const userEmail = createAccountForm.elements.userEmail.value;
     const password = createAccountForm.elements.password.value;
-
+    let mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    if(userName.length > 0 && userName.length < 10){
+        setFormMessage(createAccountForm, 'error', 'Username must be atleast 10 characters');
+        return false;
+    }
+    else if(!mailformat.test(userEmail)){
+        setFormMessage(createAccountForm, 'error', 'Invalid email provided');
+        return false;
+    }
     try {
       const response = await axios.post('/api/register', { userName, userEmail, password });
       setFormMessage(createAccountForm, "success", "Account created successfully");
@@ -58,9 +66,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const userEmail = loginForm.elements.userEmail.value;
     const password = loginForm.elements.password.value;
+    let mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    if(!mailformat.test(userEmail)){
+        setFormMessage(createAccountForm, 'error', 'Invalid email provided');
+        return false;
+    }
     try {
       const response = await axios.post('/api/login', { userEmail, password });
       console.log(response.data);
+      setFormMessage(loginForm, "success", "Congratulations!! logged in successfully");
     } catch (e) {
       console.error(e.response.data);
       if(e.response.data['message']){
@@ -74,8 +88,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   document.querySelectorAll(".form__input").forEach(inputElement => {
     inputElement.addEventListener("blur", e => {
+      let mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
       if (e.target.id === "signupUsername" && e.target.value.length > 0 && e.target.value.length < 10) {
         setInputError(inputElement, "Username must be at least 10 characters in length");
+      }
+      else if(e.target.name==='userEmail' && !mailformat.test(e.target.value)){
+        setInputError(inputElement, 'Invalid Email ID');
       }
     });
 

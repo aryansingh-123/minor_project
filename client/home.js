@@ -15,6 +15,14 @@ privacyPolicy.addEventListener("click", function(){
     window.location.href = './privacy.html';
 
 });
+
+//Term and Condition
+const termAndCondition = document.getElementById("term");
+
+termAndCondition.addEventListener("click", function(){
+    console.log("Term and Condition");
+    window.location.href='./term.html'
+})
 //Functioning of suuport Button
 const supportClick = document.getElementById("support");
 
@@ -52,6 +60,4 @@ paymentGateway3.addEventListener("click" , function(){
     console.log("Puchasing");
     window.location.href = './paymentgateway.html';
 });
-
-
 

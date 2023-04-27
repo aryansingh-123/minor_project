@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Techo - Minimalist Shopping Electronics </title>
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
@@ -12,10 +12,11 @@
 </head>
 <body class="bg-black">
     <!-----------------------------------------  Nav Bar  ------------------------------------>
-    <nav class="bg-deepBlueHead flex"> 
+    <nav class="bg-deepBlueHead flex flexBetween"> 
         <img src="./Images/T1.png" alt="TechoMarket" class="w-48 h-12 cursor-pointer">
-    <div class="relative -right-3/4 mt-3 mb-3">
-        <button id="buyNow" class="transition ease-in-out delay-10 bg-blue-500 text-white border-2 px-2 py-2 pr-2 rounded-md hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300 ">LOG IN</button>   
+    <div class="relative  mt-3 mb-3">
+        <button id="buyNow" class="transition ease-in-out delay-10 bg-blue-500 text-white border-2 px-2 py-2 pr-2 rounded-md hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300 mr-4">LOG IN</button>
+        <p id="info" class="text-white border-2 px-2 py-2 pr-2 mr-4"></p>
     </div>
     </nav>
     <!-- Another Nav Bar-->
@@ -24,9 +25,9 @@
         <img src="/Images/logo-4.png" alt="Techo" class="w-36 h-16">
 
         <div class="flex relative gap-0.5 mt-4 mb-4  font-mullish font-bold ">   
-            <h2 class="py-2 px-3 pr-5 rounded-sm bg-amber-200 cursor-pointer transition-all duration-200 hover:bg-amber-400 text-white "><a href="./cart.html">CUSTOM ORDER</a></h2>
+            <h2 class="py-2 px-3 pr-5 rounded-sm bg-amber-200 cursor-pointer transition-all duration-200 hover:bg-amber-400 text-white ">CUSTOM ORDER</h2>
             <h2 id="support" class="py-2 px-3 font-mullish font-bold text-white  hover:bg-amber-400 rounded-sm cursor-pointer transition-all duration-200 relative group">SUPPORTS</h2>
-            <h2 class="py-2 px-3 font-mullish font-bold text-white  hover:bg-amber-400 rounded-sm cursor-pointer transition-all duration-200 relative group">PURCHASE NOW</h2>
+            <h2 class="py-2 px-3 font-mullish font-bold text-white  hover:bg-amber-400 rounded-sm cursor-pointer transition-all duration-200 relative group"><a href="#" id="Cart">PURCHASE NOW</a></h2>
             
         </div>
     </nav>

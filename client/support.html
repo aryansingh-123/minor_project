@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <div class="back-button">
-        <a href="#" onclick="history.back()">Back</a>
+        <a href="#" class='text-white' onclick="history.back()">Back</a>
         <img src="./Images/T1.png" onclick="history.back()" style="float:right; width: 150px; height: 40px;">
       </div>
 
@@ -12,6 +12,7 @@
 
 <body>
     <section id="support">
+        <span id="msg"></span>
         <h2>Support and Enquiry</h2>
         <p>Please fill out the form below to submit your enquiry:</p>
         <form name="submit-to-google-sheet">
@@ -44,7 +45,6 @@
             </div>
             <button type="submit">Submit</button>
         </form>
-        <span id="msg"></span>
     </section>
     <script src="support.js" type="module"></script>
 </body>

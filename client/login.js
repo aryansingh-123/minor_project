@@ -74,7 +74,9 @@ document.addEventListener("DOMContentLoaded", () => {
     try {
       const response = await axios.post('/api/login', { userEmail, password });
       console.log(response.data);
+      const token=response.data.token;
       setFormMessage(loginForm, "success", "Congratulations!! logged in successfully");
+      window.location.href=`/?token=${token}`;
     } catch (e) {
       console.error(e.response.data);
       if(e.response.data['message']){

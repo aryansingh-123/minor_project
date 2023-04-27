@@ -2,6 +2,11 @@ import { defineConfig } from "vite";
 import { fileURLToPath } from 'url';
 export default defineConfig({
   base: './',
+  resolve: {
+    alias: {
+      'jwt-decode': require.resolve('jwt-decode'),
+    },
+  },
   build: {
     outDir: 'dist',
     rollupOptions: {
@@ -11,6 +16,7 @@ export default defineConfig({
         login: fileURLToPath(new URL('login.html', import.meta.url)),
         privacyPolicy: fileURLToPath(new URL('privacy.html', import.meta.url)),
         support: fileURLToPath(new URL('support.html', import.meta.url)),
+        cart: fileURLToPath(new URL('cart.html', import.meta.url)),
       },
     },
   },

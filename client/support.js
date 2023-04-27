@@ -8,7 +8,7 @@ const urlParams = new URLSearchParams(window.location.search);
 const token = urlParams.get('token');
 let userEmail = '';
 let userName = '';
-if(token != null){
+if(token !== 'null'&& token !== null){
   let decoded = jwt_decode(token);
   userEmail = decoded.userEmail;
   userName = decoded.userName;

@@ -4,7 +4,9 @@ const token = urlParams.get('token');
 const header = document.getElementById('header');
 const headerGreet = document.getElementById('header--greet');
 const back = document.getElementById('backhome');
-if(token != null){
+console.log(token);
+console.log(typeof token);
+if(token !== 'null'&& token !== null){
   let decoded = jwt_decode(token);
   const userEmail = decoded.userEmail;
   const userName = decoded.userName;

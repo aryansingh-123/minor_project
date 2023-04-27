@@ -3,7 +3,7 @@ const urlParams = new URLSearchParams(window.location.search);
 const token = urlParams.get('token');
 const buyNow = document.getElementById("buyNow");
 const info = document.getElementById("info");
-if(token != null){
+if(token !== 'null'&& token !== null){
   let decoded = jwt_decode(token);
   const userEmail = decoded.userEmail;
   const userName = decoded.userName;

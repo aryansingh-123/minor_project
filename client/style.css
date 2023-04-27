@@ -112,10 +112,11 @@ a {
   top: 0;
   right: 0;
   width: 300px;
-  min-height: 300px;
+  max-height: 224px;
   margin-right: 20px;
   margin-top: 10px;
   padding: 20px;
+  overflow: auto;
   background: wheat;
 }
 

@@ -72,3 +72,6 @@
 .button-4:-webkit-details-marker {
   display: none;
 }
+.hidden{
+  display: none;
+}

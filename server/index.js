@@ -24,7 +24,7 @@ const pool = mysql.createPool({
 
 // generate a JWT token
 function generateToken(user) {
-  return jwt.sign({ userEmail: user.userEmail }, process.env.JWT_SECRET, {
+  return jwt.sign({ userEmail: user.useremail, userName: user.username }, process.env.JWT_SECRET, {
     expiresIn: '1h',
   });
 }
@@ -46,13 +46,6 @@ app.post('/api/login', async (req, res) => {
 
     // check if password is correct
     const match = await bcrypt.compare(password, rows[0].password);
-    // bcrypt.genSalt(10, function(err, salt) {
-    //   bcrypt.hash(password, salt, function(err, hash) {
-    //   // returns hash
-    //   console.log(hash);
-    //   console.log(salt);
-    //   });
-    // });
     
     if (!match) {
       return res.status(401).json({ message: 'Invalid credentials' });

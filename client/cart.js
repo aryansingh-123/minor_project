@@ -1,3 +1,19 @@
+import jwt_decode from "jwt-decode";
+const urlParams = new URLSearchParams(window.location.search);
+const token = urlParams.get('token');
+const header = document.getElementById('header');
+const headerGreet = document.getElementById('header--greet');
+const back = document.getElementById('backhome');
+if(token != null){
+  let decoded = jwt_decode(token);
+  const userEmail = decoded.userEmail;
+  const userName = decoded.userName;
+  header.innerHTML = userName.split(' ')[0].concat("'s Order Cart");
+  headerGreet.innerHTML = headerGreet.innerHTML.concat(', ', userName.split(' ')[0]);
+}
+backhome.addEventListener("click", () => {
+  window.location.href = `./?token=${token}`;
+});
 var ShoppingCart = (function($) {
   "use strict";
   
@@ -15,42 +31,42 @@ var ShoppingCart = (function($) {
       id: 0,
       name: "MacBook-air",
       description: "MackBook-air features a cinema standard wide color gamut, displaying colors just as filmmakers intended.",
-      imageUrl: "/images/macbook-air.jpg",
+      imageUrl: "./Images/macbook-air.jpg",
       price: 1199
     },
     {
       id: 1,
       name: "MacBook",
       description: "Apple 2020 MacBook Air Laptop M1 chip, 13.3-inch/33.74 cm Retina Display, 8GB RAM, 256GB SSD Storage, Backlit Keyboard, FaceTime HD Camera, Touch ID. Works with iPhone/iPad; Silver",
-      imageUrl: "/images/macbook.jpg",
+      imageUrl: "./Images/macbook.jpg",
       price: 1999,
     },
     {
       id: 2,
       name: "Macbook Air",
       description: "The M1 chip and macOS Monterey work together to make the entire system snappier. MacBook Air wakes instantly from sleep",
-      imageUrl: "/images/apple.jpeg",
+      imageUrl: "./Images/apple.jpeg",
       price: 1499
     },
     {
       id: 3,
       name: "Macbook-Air(M2)",
       description: "The MacBook Air(M2) was among the first of Apple's Macs to make the transition to Apple silicon.",
-      imageUrl: "/images/apple3.jpg",
+      imageUrl: "./Images/apple3.jpg",
       price: 999
     },
     {
       id: 4,
       name: "iPad 11inch",
       description: "Apple 2020 MacBook Air Laptop M1 chip, 13.3-inch/33.74 cm Retina Display, 8GB RAM, 256GB SSD Storage, Backlit Keyboard, FaceTime HD Camera, Touch ID. Works with iPhone/iPad; Space Grey",
-      imageUrl: "/images/apple4.jpg",
+      imageUrl: "./Images/apple4.jpg",
       price: 599
     },
     {
       id: 5,
       name: "MacBook-Air 12",
       description: "iPad is Apple's most affordable and most popular tablet, and the ninth-generation model features the A13 Bionic chip.",
-      imageUrl: "/images/apple2.jpg",
+      imageUrl: "./Images/apple2.jpg",
       price: 499
     }
   ],

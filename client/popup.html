@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body{
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #d6d2d2;
+    }
+    .cross{
+      position: absolute;
+      top: 2%;
+      right: 25px;
+      font-size: 20px;
+      cursor: pointer;
+      background-color: rgba(255, 122, 0, 0.4);
+      font-weight: bolder;
+      border-radius: 10%;
+      padding: 5px;
+      text-decoration: none;
+      font-family: 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      box-shadow: 0 10px 40px rgba(255, 122, 0, 0.4);
+      
+    }
+    .btn{
+      text-decoration: none;
+      padding: 15px 40px;
+      background-color: rgba(255, 122, 0 );
+      color: #fff;
+      border-radius: 40px;
+      font-family: 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-weight: bolder;
+      box-shadow: 0 10px 40px rgba(255, 122, 0, 0.4);
+    }
+    .video-container{
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 99999;
+      background-color: rgba(255, 122, 0,0.1);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.3s;
+    }
+
+
+    .video-container .close{
+      position: absolute;
+      top: 10%;
+      right: 25px;
+      font-size: 20px;
+      cursor: pointer;
+    }
+    .video-container video{
+      width: 90%;
+      max-width: 800px;
+      transform: scale(0);
+      box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2 );
+      outline: none;
+      transition: all 0.3s;
+    }
+
+    .video-container.show{
+      pointer-events: all;
+      opacity: 1;
+    }
+    .video-container.show video{
+      transform: scale(1);
+    }
+  </style>
+</head>
+<body>
+  <button class="cross"><a href="./index.html">Home</a></button>
+  <div class="modal">
+    <a href="#" class="btn">Watch Video</a>
+
+    <div class="video-container">
+      <span class="close">&#10006;</span>
+      <video src="./Images/The new MacBook Air - Supercharged by M2 - Apple.mp4" controls></video>
+    </div>
+  </div>
+
+
+
+  <script>
+    const btn = document.querySelector('.btn');
+    const videoContainer = document.querySelector('.video-container');
+    const close = document.querySelector('.close');
+
+
+    btn.addEventListener('click', () =>{
+      videoContainer.classList.add('show');
+    })
+
+    close.addEventListener('click', () =>{
+      videoContainer.classList.remove('show');
+    })
+  </script>
+</body>
+</html>

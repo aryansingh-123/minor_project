@@ -12,7 +12,10 @@ if(token !== 'null'&& token !== null){
 } else {
   info.classList.add('hidden');
 }
-
+const customOrder = document.getElementById('custom-order');
+customOrder.addEventListener("click", () => {
+    window.location.href = `./custom.html?token=${token}`;
+})
 buyNow.addEventListener("click", function(){
     console.log("button clicked");
     window.location.href = `./login.html?token=${token}`;
@@ -78,3 +81,7 @@ cart.addEventListener("click", () => {
   window.location.href = `./cart.html?token=${token}`;
 });
 
+const letsSee = document.getElementById('let-see');
+letsSee.addEventListener("click", () =>{
+    window.location.href = `./popup.html?token=${token}`;
+})

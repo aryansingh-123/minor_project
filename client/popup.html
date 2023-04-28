@@ -86,7 +86,7 @@
   </style>
 </head>
 <body>
-  <button class="cross"><a href="./index.html">Home</a></button>
+  <button class="cross"><a href="#" id="home">Home</a></button>
   <div class="modal">
     <a href="#" class="btn">Watch Video</a>
 
@@ -98,11 +98,17 @@
 
 
 
-  <script>
+  <script type="module">
+    import jwt_decode from "jwt-decode";
+    const urlParams = new URLSearchParams(window.location.search);
+    const token = urlParams.get('token');
     const btn = document.querySelector('.btn');
     const videoContainer = document.querySelector('.video-container');
     const close = document.querySelector('.close');
-
+    const home = document.getElementById('home');
+    home.addEventListener('click', () => {
+      window.location.href = `./index.html?token=${token}`;
+    })
 
     btn.addEventListener('click', () =>{
       videoContainer.classList.add('show');

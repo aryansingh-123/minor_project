@@ -17,6 +17,8 @@ export default defineConfig({
         privacyPolicy: fileURLToPath(new URL('privacy.html', import.meta.url)),
         support: fileURLToPath(new URL('support.html', import.meta.url)),
         cart: fileURLToPath(new URL('cart.html', import.meta.url)),
+        popup: fileURLToPath(new URL('popup.html', import.meta.url)),
+        custom: fileURLToPath(new URL('custom.html', import.meta.url)),
       },
     },
   },

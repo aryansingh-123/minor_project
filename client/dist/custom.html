@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Custom Laptop Order</title>
+	
+    
+  <script type="module" crossorigin src="./assets/custom-da69fd27.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/modulepreload-polyfill-3cfb730f.js">
+  <link rel="modulepreload" crossorigin href="./assets/jwt-decode.cjs-04859c74.js">
+  <link rel="stylesheet" href="./assets/custom-6d644b83.css">
+</head>
+<div class="back-button">
+    <a href="#" id="back-button"><b>Back</b></a>
+</div>
+<body>
+	<h1>Custom Laptop Order</h1>
+	<form>
+		<h2>Personal Information</h2>
+		<label for="name">Name:</label>
+		<input type="text" id="name" name="name" required><br><br>
+		<label for="email">Email:</label>
+		<input type="email" id="email" name="email" required><br><br>
+		<label for="phone">Phone:</label>
+		<input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required><br><br>
+
+		<h2>Laptop Configuration</h2>
+		<label for="processor">Processor:</label>
+		<select id="processor" name="processor">
+			<option value="i3">Intel Core i3</option>
+			<option value="i5">Intel Core i5</option>
+			<option value="i7">Intel Core i7</option>
+			<option value="ryzen3">AMD Ryzen 3</option>
+			<option value="ryzen5">AMD Ryzen 5</option>
+			<option value="ryzen7">AMD Ryzen 7</option>
+		</select><br><br>
+
+		<label for="ram">RAM:</label>
+		<select id="ram" name="ram">
+			<option value="4GB">4GB</option>
+			<option value="8GB">8GB</option>
+			<option value="16GB">16GB</option>
+			<option value="32GB">32GB</option>
+			 <option value="64GB">64GB</option>
+		</select><br><br>
+
+		<label for="storage">Storage:</label>
+		<select id="storage" name="storage">
+			<option value="256GB SSD">256GB SSD</option>
+			<option value="512GB SSD">512GB SSD</option>
+			<option value="1TB HDD">1TB HDD</option>
+			<option value="1TB SSD">1TB SSD</option>
+			<option value="2TB HDD">2TB HDD</option>
+			<option value="2TB SSD">2TB SSD</option>
+		</select><br><br>
+
+		<label for="graphics">Graphics:</label>
+		<select id="graphics" name="graphics">
+			<option value="Integrated">Integrated</option>
+			<option value="Nvidia GTX 1050">Nvidia GTX 1050</option>
+			<option value="Nvidia GTX 1650">Nvidia GTX 1650</option>
+			<option value="Nvidia GTX 1660">Nvidia GTX 1660</option>
+			<option value="Nvidia RTX 2060">Nvidia RTX 2060</option>
+			<option value="Nvidia RTX 3070">Nvidia RTX 3070</option>
+		</select><br><br>
+
+		<label for="os">Operating System:</label>
+		<select id="os" name="os">
+			<option value="Windows 10 Home">Windows 10 Home</option>
+			<option value="Windows 11">Windows 11</option>
+			<option value="Ubuntu">Ubuntu</option>
+			<option value="MacOS">MacOS</option>
+		</select><br><br>
+
+	
+        <h2>Accessories</h2>
+        <label for="mouse">Mouse:</label>
+        <input type="checkbox" id="mouse" name="mouse" value="yes">
+        <label for="mouse">Yes</label><br><br>
+    
+        <label for="keyboard">Keyboard:</label>
+        <input type="checkbox" id="keyboard" name="keyboard" value="yes">
+        <label for="keyboard">Yes</label><br><br>
+    
+        <label for="monitor">External Monitor:</label>
+        <input type="checkbox" id="monitor" name="monitor" value="yes">
+        <label for="monitor">Yes</label><br><br>
+    
+        <h2>Delivery Information</h2>
+        <label for="address">Address:</label>
+        <textarea id="address" name="address" rows="5" cols="30" required></textarea><br><br>
+    
+        <label for="city">City:</label>
+        <input type="text" id="city" name="city" required><br><br>
+    
+        <label for="state">State:</label>
+        <input type="text" id="state" name="state" required><br><br>
+    
+        <label for="pin">PIN Code:</label>
+        <input type="text" id="pin" name="pin" required><br><br><br>
+    
+        <button id="place" type="submit" style="font-weight:bold;">Place Order</button>
+
+    </form>
+	
+</body>
+</html>    

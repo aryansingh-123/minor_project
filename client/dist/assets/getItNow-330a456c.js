@@ -1,1 +1,0 @@
-import"./modulepreload-polyfill-3cfb730f.js";import{j as t}from"./jwt-decode.cjs-04859c74.js";const n=new URLSearchParams(window.location.search),e=n.get("token"),c=document.getElementById("home");if(e!=="null"&&e!==null){let o=t(e);o.userEmail,o.userName}c.addEventListener("click",()=>{window.location.href=`/?token=${e}`});

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider Design </title>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="../../assets/sliding-8f0ecaff.css">
+</head>
+<body>
+    <div class="container">
+     <!-- Slider main container -->
+<div class="swiper">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+      <!-- Slides -->
+      <div class="swiper-slide"><img src="../../assets/mac2-3eeee1b3.jpeg"></div> 
+      <div class="swiper-slide"><img src="../../assets/mac1.1-a5531701.jpg" alt=""></div>
+      <div class="swiper-slide"><img src="../../assets/mac3.1-0709c687.webp" alt=""></div>
+      <div class="swiper-slide"><img src="../../assets/mac4-914f9025.jpg" alt=""></div>
+      <div class="swiper-slide"><img src="../../assets/apple2-7867ead8.jpg" alt=""></div>
+    
+    </div>
+    <!-- If we need pagination -->
+    <div class="swiper-pagination"></div>
+  
+    <!-- If we need navigation buttons -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  
+    
+  </div>
+    </div>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <script>
+    
+    const swiper = new Swiper('.swiper', {
+  autoplay:{
+    delay: 3000,
+    disableOnInteraction: false,
+  },
+  loop: true,
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+ 
+});
+    </script>
+</body>
+</html>

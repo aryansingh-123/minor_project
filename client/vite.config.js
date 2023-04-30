@@ -19,6 +19,7 @@ export default defineConfig({
         cart: fileURLToPath(new URL('cart.html', import.meta.url)),
         popup: fileURLToPath(new URL('popup.html', import.meta.url)),
         custom: fileURLToPath(new URL('custom.html', import.meta.url)),
+        getItNow: fileURLToPath(new URL('./rahul/get_it_new.html', import.meta.url)),
       },
     },
   },

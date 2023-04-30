@@ -3,6 +3,8 @@ const urlParams = new URLSearchParams(window.location.search);
 const token = urlParams.get('token');
 const buyNow = document.getElementById("buyNow");
 const info = document.getElementById("info");
+const getItNow = document.getElementById("getItNow");
+const takeATour = document.getElementById('takeATour');
 if(token !== 'null'&& token !== null){
   let decoded = jwt_decode(token);
   const userEmail = decoded.userEmail;
@@ -13,6 +15,12 @@ if(token !== 'null'&& token !== null){
   info.classList.add('hidden');
 }
 const customOrder = document.getElementById('custom-order');
+takeATour.addEventListener('click', () => {
+    window.location.href = `./rahul/video2.html?token=${token}`;
+})
+getItNow.addEventListener("click", () => {
+    window.location.href = `./rahul/get_it_new.html?token=${token}`;
+})
 customOrder.addEventListener("click", () => {
     window.location.href = `./custom.html?token=${token}`;
 })

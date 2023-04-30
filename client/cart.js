@@ -13,7 +13,7 @@ if(token !== 'null'&& token !== null){
   header.innerHTML = userName.split(' ')[0].concat("'s Order Cart");
   headerGreet.innerHTML = headerGreet.innerHTML.concat(', ', userName.split(' ')[0]);
 }
-backhome.addEventListener("click", () => {
+back.addEventListener("click", () => {
   window.location.href = `./?token=${token}`;
 });
 var ShoppingCart = (function($) {
